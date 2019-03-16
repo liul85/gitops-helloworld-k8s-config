@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: gitops-helloworld
+    labels:
+        app: gitops-helloworld
+
+spec:
+    replicas: 1
+    selector:
+        matchLabels:
+            app: gitops-helloworld
+    template:
+        metadata:
+            labels:
+                app: gitops-helloworld
+        spec:
+            containers:
+                - name: gitops-helloworld
+                  image: asia.gcr.io/gitops-233223/gitops-hello-world:${COMMIT}
+                  ports:
+                      - containerPort: 8081
+
