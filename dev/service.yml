@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+    name: gitops-helloworld
+spec:
+    selector:
+        app: gitops-helloworld
+    ports:
+        - protocol: TCP
+          port: 80
+          targetPort: 8081
+    type: LoadBalancer
