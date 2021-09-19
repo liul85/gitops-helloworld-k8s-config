@@ -10,3 +10,7 @@ spec:
           port: 80
           targetPort: 8081
     type: LoadBalancer
+
+2021-09-19 * "KFC" "chicken"
+  cba        -12.90 AUD
+  food        12.90 AUD
